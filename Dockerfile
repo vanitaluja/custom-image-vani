@@ -15,23 +15,23 @@ USER root
 
 # -----------------
 # Install OpenJDK-17
-RUN apt-get update && \
-    apt-get install -y openjdk-17-jdk-headless && \
-    apt-get clean;
+#RUN apt-get update && \
+ #   apt-get install -y openjdk-17-jdk-headless && \
+  #  apt-get clean;
 
 # Install PYTHON requirements
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# COPY requirements.txt ./
+# RUN pip install --no-cache-dir -r requirements.txt
 # -----------------
 
-RUN apt-get -y install htop
+RUN apt-get -y install openjdk-17-jdk-headless
 
 # 3) install packages using notebook user
-USER jovyan
+# USER jovyan
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy
+# RUN pip install --no-cache-dir networkx scipy
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
