@@ -16,7 +16,7 @@ USER root
 RUN apt-get update && apt-get -y install openjdk-17-jre-headless
 
 # 3) install packages using notebook user
-USER vtaluja
+# USER vtaluja
 
 # RUN conda install -y scikit-learn
 
