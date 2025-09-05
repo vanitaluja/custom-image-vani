@@ -24,7 +24,8 @@ USER root
 # RUN pip install --no-cache-dir -r requirements.txt
 # -----------------
 
-RUN apt-get -y install openjdk-17-jdk-headless
+RUN apt-get update
+RUN apt-get -y install openjdk-17-jre-headless
 
 # 3) install packages using notebook user
 # USER jovyan
