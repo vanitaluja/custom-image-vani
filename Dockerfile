@@ -13,17 +13,6 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-# -----------------
-# Install OpenJDK-17
-#RUN apt-get update && \
- #   apt-get install -y openjdk-17-jdk-headless && \
-  #  apt-get clean;
-
-# Install PYTHON requirements
-# COPY requirements.txt ./
-# RUN pip install --no-cache-dir -r requirements.txt
-# -----------------
-
 RUN apt-get update
 RUN apt-get -y install openjdk-17-jre-headless
 
@@ -35,4 +24,4 @@ RUN apt-get -y install openjdk-17-jre-headless
 # RUN pip install --no-cache-dir networkx scipy
 
 # Override command to disable running jupyter notebook at launch
-# CMD ["/bin/bash"]
+CMD ["/bin/bash"]
