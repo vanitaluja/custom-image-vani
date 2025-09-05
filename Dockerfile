@@ -19,7 +19,7 @@ RUN apt-get update && apt-get -y install openjdk-17-jre-headless
 # USER vtaluja
 
 # RUN conda install -y scikit-learn
-
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Override command to disable running jupyter notebook at launch
