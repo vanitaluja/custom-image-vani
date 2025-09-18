@@ -13,7 +13,8 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN apt-get update && apt-get -y install openjdk-17-jre-headless && apt-get -y install apache-maven-3.9.6
+RUN apt-get update && apt-get -y install openjdk-17-jre-headless 
+RUN curl /tmp/apache-maven.tar.gz https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 
 # 3) install packages using notebook user
 # USER vtaluja
